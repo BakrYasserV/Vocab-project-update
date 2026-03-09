@@ -184,3 +184,78 @@ select option { background: #181818; color: var(--accent-color); }
 }
 
 .save-btn-active { display: block !important; width: 100%; margin-top: 10px; background: var(--accent-color); border: none; color: white; padding: 8px; border-radius: 5px; cursor: pointer; }
+
+
+
+/* --- Enhanced Input Section --- */
+.input-row { 
+    display: flex; 
+    gap: 25px; 
+    max-width: 1000px; /* Increased width to accommodate larger inputs */
+    margin: 0 auto; 
+    align-items: flex-end; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02); /* Subtle background lift */
+    border-radius: 15px;
+}
+
+.input-group { 
+    position: relative; 
+    flex: 2; 
+}
+
+.input-group.small-group {
+    flex: 1.5; /* Keeps the meaning slightly smaller than the word if desired */
+}
+
+.input-group input { 
+    width: 100%; 
+    padding: 15px 10px; /* More vertical padding */
+    background: transparent; 
+    border: none; 
+    border-bottom: 2px solid #333; /* Thicker line */
+    color: #fff; 
+    outline: none; 
+    font-size: 1.2rem; /* Larger font size for typing */
+    transition: border-color 0.3s ease;
+}
+
+.input-group label { 
+    position: absolute; 
+    top: 15px; 
+    left: 10px; 
+    color: #888; 
+    transition: 0.3s; 
+    pointer-events: none; 
+    font-size: 1.1rem;
+}
+
+/* Floating Label Animation */
+.input-group input:focus ~ label, 
+.input-group input:valid ~ label { 
+    top: -20px; 
+    font-size: 0.9rem; 
+    color: var(--accent-color); 
+    font-weight: bold;
+}
+
+.input-group input:focus {
+    border-bottom-color: var(--accent-color);
+}
+
+#addBtn {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0 35px; /* Wider button */
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 55px; /* Taller button to match larger inputs */
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-family: 'Cairo';
+}
