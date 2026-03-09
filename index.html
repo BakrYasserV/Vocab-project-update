@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocab Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header id="mainHeader">
+            <div class="title-border" id="backToTopTitle">
+                <h1>New Words</h1>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <input type="text" id="wordInput" required autocomplete="off">
+                    <label>New Word</label>
+                </div>
+                <div class="input-group small-group">
+                    <input type="text" id="meaningInput" required autocomplete="off">
+                    <label>Meaning</label>
+                </div>
+                <button id="addBtn">Add</button>
+            </div>
+
+            <div class="toolbar">
+                <div class="action-buttons">
+                    <button class="icon-text-btn" id="selectAllBtn">
+                        <span class="material-icons">select_all</span> Select All
+                    </button>
+                    <button class="icon-text-btn danger" id="deleteSelectedBtn" style="display: none;">
+                        <span class="material-icons">delete_sweep</span> Delete
+                    </button>
+                </div>
+
+                <div class="grid-controls">
+                    <span class="material-icons">view_module</span>
+                    <select id="columnSelect">
+                        <option value="2">2 Columns</option>
+                        <option value="3">3 Columns</option>
+                        <option value="4" selected>4 Columns</option>
+                        <option value="5">5 Columns</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main id="notesGrid" class="notes-grid"></main>
+    </div>
+
+    <button id="scrollToTopBtn" title="Go to top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <script src="index.js"></script>
+</body>
+</html>
